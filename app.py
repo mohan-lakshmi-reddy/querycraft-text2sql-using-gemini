@@ -44,7 +44,7 @@ GROUP BY department;
 Your tasks Convert the following English descriptions into SQL queries.
 Input: {sql_text}
 Things you need to remember everytime-
--50 Query:
+
 And from the next line write the sql query snippet
 Present the results following the same format as the examples provided above.
 Break the query snippet as shown in examples
