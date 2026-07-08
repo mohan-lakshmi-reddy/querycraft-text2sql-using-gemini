@@ -8,16 +8,8 @@ from streamlit_extras.add_vertical_space import add_vertical_space as avs
 # Load environment variables
 load_dotenv()
 
-# --- Check for Google API Key ---
-#google_api_key = os.getenv("GOOGLE_API_KEY")
-#if not google_api_key:
- #   st.error("Google API Key not found. Please set it in your .env file.")
-  #  st.stop() # Stop the app if the key is missing
-
 genai.configure(api_key= os.getenv("GOOGLE_API_KEY"))
-model = genai.GenerativeModel(model_name="gemini-1.5-flash-latest")
-
-
+model = genai.GenerativeModel(model_name="gemini-2.5-flash")
 
 # Gemini API response function
 def get_gemini_response(input):
@@ -57,7 +49,6 @@ And from the next line write the sql query snippet
 Present the results following the same format as the examples provided above.
 Break the query snippet as shown in examples
 """
-
 
 # Streamlit UI configuration
 st.set_page_config(page_title="Text to SQL Query", layout="wide") # Corrected: page_title
